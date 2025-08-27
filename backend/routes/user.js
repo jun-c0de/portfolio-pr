@@ -163,6 +163,20 @@ router.delete('/delete/:userId',async(req,res)=>{
     }
 })
 
+router.post('/verify-token',(req,res)=>{
+    try {
+        const token = req.cookies.token
+
+        if(!token){
+            return res.status(400).json({
+                isValid:false,
+                message:"토큰이 없습니다."})
+        }
+    } catch (error) {
+        
+    }
+})
+
 
 
 
