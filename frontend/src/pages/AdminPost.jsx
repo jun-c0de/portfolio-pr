@@ -1,3 +1,4 @@
+// src/pages/AdminPost.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { api } from "../lib/api"; // baseURL + withCredentials: true

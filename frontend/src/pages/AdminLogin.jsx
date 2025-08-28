@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { api } from "../lib/api"
 import { useNavigate } from "react-router-dom"
 import "./styles/AdminLogin.scss"
+
 const AdminLogin = () => {
 
   const nav = useNavigate()
@@ -21,25 +22,26 @@ const AdminLogin = () => {
     })
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit=async(e)=>{
     e.preventDefault()
 
     try {
-      const response = await api.post('/api/auth/login',
-        formData, {
-        withCredentials: true
-      }
+      const response =await api.post('/api/auth/login',
+        formData,{
+          withCredentials:true
+        }     
       )
-      if (response.data.user) {
+      if(response.data.user){
         nav("/admin/post")
       }
     } catch (error) {
-      const errorMsg = error.response.data.message || '로그인 실패'
+      const errorMsg = error.response.data.message ||'로그인 실패'
 
       setError({
-        message: errorMsg
+        message:errorMsg
       })
     }
+
   }
 
   return (
@@ -50,25 +52,25 @@ const AdminLogin = () => {
       </div>
       <form className='login-form' onSubmit={handleSubmit}>
         <div className="form-field">
-          <label htmlFor="username">관리자 아이디 : </label>
+
+          <label htmlFor="username">관리자 아이디 :</label>
           <input
             type="text"
             name='username'
             id='username'
             value={formData.username}
             onChange={handleChange}
-            required
-            placeholder='관리자 아이디' />
+            required placeholder='관리자 아이디' />
         </div>
         <div className="form-field">
-          <label htmlFor="password">관리자 비밀번호 : </label>
-          <input
-            type="password"
+
+          <label htmlFor="password">관리자 비밀번호 :</label>
+          <input type="password"
             id='password'
             name='password'
+            required
             value={formData.password}
             onChange={handleChange}
-            required
             placeholder='관리자 비밀번호' />
         </div>
         <div className="error-box"></div>
