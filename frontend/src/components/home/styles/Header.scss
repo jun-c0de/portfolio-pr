@@ -4,12 +4,27 @@ header {
     width: 100%;
     transition: all .3s;
 
+    .fixed-top {
+        position: fixed;
+        right: 2rem;
+        bottom: 2rem;
+        cursor: pointer;
+        color: var(--text);
+        transition: all .3s;
+        transform: translateY(3rem);
+        opacity: 0;
+    }
 
     &.scroll {
         background-color: var(--bg);
 
         .inner {
             border-bottom: .1rem solid var(--underline);
+        }
+
+        .fixed-top {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 

@@ -1,0 +1,25 @@
+.inner.foot-inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10rem;
+    color: var(--text);
+    
+    .left {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        color: var(--neutral-500);
+    }
+
+    .text-box {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .right{
+        display: flex;
+        gap: 15px;
+    }
+
+   
+}
