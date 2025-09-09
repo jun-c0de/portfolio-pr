@@ -1,14 +1,25 @@
-.aboutme-inner{
+.aboutme-inner {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100vh !important;
 
-    h1.tit{
+    @media screen and (max-width:1200px){
+        height: auto !important; 
+    }
+
+    h1.tit {
         align-self: flex-end;
         transform: translateX(11vw);
         position: relative;
-        .star-spin{
+
+        @media screen and (max-width:1599px) {
+            transform: translateX(0);
+            align-self: flex-start;
+        }
+
+
+        .star-spin {
             position: absolute;
             left: -10rem;
             top: -10rem;
@@ -16,27 +27,40 @@
         }
     }
 
-    .about-container{
+    .about-container {
         display: flex;
         gap: 2rem;
         width: 100%;
         margin-top: 5.3rem;
-        .in-wrap{
+
+        @media screen and (max-width:1440px) {
+            flex-wrap: wrap;
+        }
+
+        .in-wrap {
             // width: 25%;
             flex: 1;
-            .lst{
-                >li{
+
+            @media screen and (max-width:1440px) {
+                min-width: 30rem;
+            }
+
+            .lst {
+                >li {
                     line-height: 2;
                     padding: .5rem 1rem 0;
                     font-size: 1.4rem;
-                    >strong{
+
+                    >strong {
                         display: inline-block;
                         padding: 0 3rem 0 0;
                     }
-                    &:nth-child(even){
+
+                    &:nth-child(even) {
                         background-color: var(--gray100);
                     }
-                    &:hover{
+
+                    &:hover {
                         background-color: var(--primary);
                         color: var(--bg);
                     }

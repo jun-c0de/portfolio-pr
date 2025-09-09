@@ -12,6 +12,19 @@ section {
 
     &#Contact{
         height: 100vh;
+
+        @media screen and (max-width:1200px){
+            height: auto;
+            min-height: auto;
+            padding: 20rem 0;
+        }
+    }
+    &#Aboutme{
+        @media screen and (amx-width:1200px){
+            height: auto;
+            min-height: auto;
+            padding: 20rem 0;
+        }
     }
 }
 
@@ -119,6 +132,7 @@ span.star-spin {
     transform-origin: 50% 50%;
     animation: rotate 3s infinite alternate;
     position: relative;
+    // left: 50%;
 
     i.star {
         position: absolute;
