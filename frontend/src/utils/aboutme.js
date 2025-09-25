@@ -2,10 +2,10 @@
 
 const aboutMe = {
   basic: {
-    name: "홍길동",
-    age: 29,
-    location: "서울, 대한민국",
-    mbti: "INTJ",
+    name: "유성준",
+    age: 25,
+    location: "경기도 가평, 대한민국",
+    mbti: "ISFP",
   },
   skills: [
     "JavaScript (ES6+)",
